@@ -22,8 +22,9 @@ $( document ).ready(function() {
   ShowTemperature = function() {
     $('.temperature').html(thermostat.temperature);
   };
+
   TemperatureColour = function() {
-    $('.temperature').css('color', thermostat.colourUpdate());
+    $('.temperature').attr('data-color', thermostat.colourUpdate());
   };
 
   $('.temperature').show(function() {

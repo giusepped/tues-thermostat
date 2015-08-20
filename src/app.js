@@ -9,6 +9,10 @@ ShowTemperature = function() {
 TemperatureColour = function() {
   temperature.style.color = thermostat.colourUpdate();
 };
+
+TemperatureColour = function() {
+
+};
 ShowTemperature();
 TemperatureColour();
 

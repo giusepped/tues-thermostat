@@ -33,3 +33,15 @@ button {
 button:focus {
   outline: none;
 }
+
+[data-color = "yellow"] {
+  color: yellow;
+}
+
+[data-color = "green"] {
+  color: green;
+}
+
+[data-color = "red"] {
+  color: red;
+}
