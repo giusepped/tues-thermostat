@@ -18,7 +18,6 @@ $( document ).ready(function() {
 
   thermostat = new Thermostat();
 
-  var current_temp = $('span')[0];
   ShowTemperature = function() {
     $('.temperature').html(thermostat.temperature);
   };
@@ -32,25 +31,25 @@ $( document ).ready(function() {
     TemperatureColour();
   });
 
-  $('button').eq(0).click(function() {
+  $('.up').click(function() {
     thermostat.raise();
     ShowTemperature();
     TemperatureColour();
   });
 
-  $('button').eq(1).click(function() {
+  $('.down').click(function() {
     thermostat.lower();
     ShowTemperature();
     TemperatureColour();
   });
 
-  $('button').eq(2).click(function() {
+  $('.reset').click(function() {
     thermostat.resetTemperature();
     ShowTemperature();
     TemperatureColour();
   });
 
-  $('input').eq(0).change(function() {
+  $('.power_save').change(function() {
     if(this.checked) {
       thermostat.powerSaveSwitchOn();
     } else {

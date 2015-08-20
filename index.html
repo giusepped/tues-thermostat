@@ -10,16 +10,18 @@
 </head>
 
 <body>
-  <div class="container">
-  <section class ="temp"><span class="temperature" data-color=""></span>° C</section>
-  <button type="button">↑</button>
-  <button type="button">↓</button>
-  <button type="button">Reset</button>
-  <input type="checkbox" checked>Power saving mode</button>
-  </div>
 
   <button class="choose_city">Get weather information</button>
   <section class="weather"></section>
+
+  <div class="container">
+  <section class ="temp"><span class="temperature" data-color=""></span>° C</section>
+  <button class="up" type="button">↑</button>
+  <button class="down"type="button">↓</button>
+  <button class="reset" type="button">Reset</button>
+  <input class="power_save" type="checkbox" checked>Power saving mode</button>
+  </div>
+
   <script src="src/app_jquery.js"></script>
   <script src="src/Thermostat.js"></script>
 </body>
