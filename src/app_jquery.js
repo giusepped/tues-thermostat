@@ -1,20 +1,36 @@
 // JQUERY APP
 
-thermostat = new Thermostat();
-
-var temperature = $('span')[0];
-ShowTemperature = function() {
-  temperature.innerHTML = thermostat.temperature;
-};
-TemperatureColour = function() {
-  temperature.style.color = thermostat.colourUpdate();
-};
 
 $( document ).ready(function() {
+
+  // $('.choosecity').click(function() {
+  //   $.ajax({
+  //     url: "api.openweathermap.org/data/2.5/find?q=London&units=metric",
+  //     dataType: 'xml'
+  //   }).done(function(data){
+  //     var weather = $('.weather');
+  //     weather.innerHTML = data;
+  //   }).fail(function(){
+  //     var weather = $('.weather');
+  //     weather.innerHTML = 'there was an error';
+  //   })
+  // })
+
+  thermostat = new Thermostat();
+
+  var current_temp = $('span')[0];
+  ShowTemperature = function() {
+    $('.temperature').html(thermostat.temperature);
+  };
+  TemperatureColour = function() {
+    $('.temperature').css('color', thermostat.colourUpdate());
+  };
+
   $('.temperature').show(function() {
     ShowTemperature();
     TemperatureColour();
-  })
+  });
+
   $('button').eq(0).click(function() {
     thermostat.raise();
     ShowTemperature();
@@ -31,7 +47,7 @@ $( document ).ready(function() {
     thermostat.resetTemperature();
     ShowTemperature();
     TemperatureColour();
-  })
+  });
 
   $('input').eq(0).change(function() {
     if(this.checked) {
@@ -41,5 +57,5 @@ $( document ).ready(function() {
     };
     ShowTemperature();
     TemperatureColour();
-  })
+  });
 });
