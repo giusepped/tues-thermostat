@@ -63,4 +63,15 @@ describe('Thermostat feature tests', function(){
     expect('.temperature').toHaveAttr('data-color', 'green');
   });
 
+  it("should call weather API", function() {
+    spyOn($, "ajax").and.callFake(function(url, callback) {
+      show_weather({"list":[{"name":"London","main":{"temp":20.23}}]}
+        );
+      });
+      $(".desired_city").val("London");
+      $(".choose_city").click();
+      expect($.ajax).toHaveBeenCalled();
+      expect(".outside_temperature").toContainText("20 °C");
+  });
+
 });

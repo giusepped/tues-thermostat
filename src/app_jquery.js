@@ -3,11 +3,15 @@
 
 $( document ).ready(function() {
 
+  show_weather = function(data) {
+    $('.outside_temperature').text(data.list[0].name + ": " + Math.round(data.list[0].main.temp) + " °C");
+  };
+
   ajax_call = function(city) { $.ajax({
       url: "http://api.openweathermap.org/data/2.5/find?q="+city+"&units=metric",
       dataType: 'json',
       success: function(data) {
-        $('.outside_temperature').html(Math.round(data.list[0].main.temp));
+        show_weather(data);
       }
     })
   };
