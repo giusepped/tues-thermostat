@@ -1,47 +1,43 @@
+
 body {
-  background-image: url("background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  text-align: left;
+  margin: 0;
+  background-color: lightblue;
+}
+
+header {
+  position: fixed;
+  padding: 30px 0 0;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .container {
-  font-family: 'Arial Black', 'Arial Bold', Gadget, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 400;
-  line-height: 20px;
-  position: fixed;
+  padding-top: 150px;
+  width:100%;
   top: 50%;
   left: 50%;
-  margin-top: -50px;
-  margin-left: -100px;
   text-align: center;
 }
 
 .temp {
-  font-size: 35px;
-  padding-bottom: 20px;
+  font-size: 70px;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-button {
-  border-radius: 10px;
-  background: lightblue;
+.buttons {
+  font-size: 20px;
+  font-family: Helvetica, Arial, sans-serif;
 }
-
-button:focus {
-  outline: none;
-}
-
-[data-color = "yellow"] {
+[data-color="yellow"] {
   color: yellow;
 }
 
-[data-color = "green"] {
-  color: green;
+[data-color="red"] {
+  color: red;
 }
 
-[data-color = "red"] {
-  color: red;
+[data-color="green"] {
+  color: green;
 }

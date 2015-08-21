@@ -10,16 +10,20 @@
 </head>
 
 <body>
-
-  <button class="choose_city">Get weather information</button>
-  <section class="weather"></section>
+  <header>
+    <input class="desired_city" type="text" autofocus="autofocus">
+    <button type="submit" class="choose_city">Get weather information</button>
+    <section class="outside_temperature"></section>
+  </header>
 
   <div class="container">
-  <section class ="temp"><span class="temperature" data-color=""></span>° C</section>
-  <button class="up" type="button">↑</button>
-  <button class="down"type="button">↓</button>
-  <button class="reset" type="button">Reset</button>
-  <input class="power_save" type="checkbox" checked>Power saving mode</button>
+    <section class ="temp"><span class="temperature" data-color=""></span>° C</section>
+    <section class="buttons">
+    <button class="up" type="button">↑</button>
+    <button class="down"type="button">↓</button>
+    <button class="reset" type="button">Reset</button>
+    <input class="power_save" type="checkbox" checked>Power saving mode</button>
+    <section class="buttons">
   </div>
 
   <script src="src/app_jquery.js"></script>
